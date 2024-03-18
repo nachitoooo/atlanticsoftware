@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button"
 
 export function Pricing() {
   return (
-    <section className="w-full py-12">
+    <section className="w-full py-20">
       <div className="flex flex-col items-center space-y-4">
         <div className="text-center space-y-2">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Our Pricing</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-gray-400">Our Pricing</h2>
           <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
             Start with a 14-day free trial. No credit card required.
           </p>
