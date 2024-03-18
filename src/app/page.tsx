@@ -4,6 +4,9 @@ import { HoveredLink, Menu, MenuItem, ProductItem } from "./components/ui/navbar
 import { cn } from "../../utils/cn"; 
 import { Button } from "@/components/ui/button";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import { CardHoverEffectDemo } from "@/components/component/card-hover-effect-component";
+import { ButtonWithIcon } from "@/components/component/button-shadcn";
+import { ButtonWithCalendarIcon } from "@/components/component/book-call";
 
 export default function NavbarDemo() {
   return (
@@ -33,7 +36,6 @@ function Navbar({ className }: { className?: string }) {
           </div>
         </MenuItem>
 
-        {/*  */}
         <MenuItem setActive={setActive} active={active} item="Pricing">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/hobby">Hobby</HoveredLink>
@@ -58,11 +60,15 @@ export function HomeAtlantic() {
     {
       text: "negocio",
     },
+    
     {
       text: "con",
     },
     {
-      text: "Atlantic software.",
+      text: "Atlantic",
+    },
+    {
+      text: "Software.",
       className: "text-blue-600 dark:text-blue-500",
     },
   ];
@@ -72,11 +78,20 @@ export function HomeAtlantic() {
       <section className="max-w-6xl mx-auto px-4 py-20 text-center">
         <div className="mb-12">
           <h1 className="text-6xl font-bold mb-4" style={{ marginTop: '150px' }}>
-            <TypewriterEffect words={words} /> {/* Utiliza el componente TypewriterEffect */}
+            <TypewriterEffect words={words} /> 
           </h1>
+          <p className="text-sm font-bold text-gray-400">Atlantic software is a software development company that provides software solutions for your company, integrating AI into your projects.</p>
+        </div>
+
+        <div className="flex justify-center space-x-4">
+          <ButtonWithIcon />
+          <ButtonWithCalendarIcon />
         </div>
         
+        {/* <CardHoverEffectDemo></CardHoverEffectDemo> */}
+
       </section>
     </div>
+    
   );
 }
