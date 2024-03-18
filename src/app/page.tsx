@@ -8,7 +8,7 @@ import { CardHoverEffectDemo } from "@/components/component/card-hover-effect-co
 import { ButtonWithIcon } from "@/components/component/button-shadcn";
 import { ButtonWithCalendarIcon } from "@/components/component/book-call";
 import { WavyBackgroundDemo } from "@/components/component/wavy-background";
-
+import { Pricing } from "@/components/component/pricing";
 
 export default function NavbarDemo() {
   return (
@@ -78,8 +78,8 @@ export function HomeAtlantic() {
           <ButtonWithIcon />
           <ButtonWithCalendarIcon />
         </div>
-
         <CardHoverEffectDemo />
+        <Pricing></Pricing>
       </section>
     </div>
   );
