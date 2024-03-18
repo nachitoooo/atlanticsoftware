@@ -7,10 +7,14 @@ import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { CardHoverEffectDemo } from "@/components/component/card-hover-effect-component";
 import { ButtonWithIcon } from "@/components/component/button-shadcn";
 import { ButtonWithCalendarIcon } from "@/components/component/book-call";
+import { WavyBackgroundDemo } from "@/components/component/wavy-background";
+
 
 export default function NavbarDemo() {
   return (
     <div className="relative w-full flex items-center justify-center">
+      <WavyBackgroundDemo /> {/* Coloca el fondo ondulado aquí para que aparezca detrás de todo */}
+
       <Navbar className="top-2" />
       <HomeAtlantic />
     </div>
@@ -23,6 +27,7 @@ function Navbar({ className }: { className?: string }) {
     <div
       className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
     >
+      
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Home">
         </MenuItem>
@@ -51,34 +56,20 @@ function Navbar({ className }: { className?: string }) {
 
 export function HomeAtlantic() {
   const words = [
-    {
-      text: "Potencia",
-    },
-    {
-      text: "tu",
-    },
-    {
-      text: "negocio",
-    },
-    
-    {
-      text: "con",
-    },
-    {
-      text: "Atlantic",
-    },
-    {
-      text: "Software.",
-      className: "text-blue-600 dark:text-blue-500",
-    },
+    { text: "Potencia" },
+    { text: "tu" },
+    { text: "negocio" },
+    { text: "con" },
+    { text: "Atlantic" },
+    { text: "Software.", className: "text-blue-600 dark:text-blue-500" },
   ];
 
   return (
     <div className="bg-black text-white">
-      <section className="max-w-6xl mx-auto px-4 py-20 text-center">
+      <section className="max-w-6xl mx-auto px-4 py-20 text-center relative z-10"> {/* Asegúrate de tener un z-index mayor que el fondo ondulado */}
         <div className="mb-12">
           <h1 className="text-6xl font-bold mb-4" style={{ marginTop: '150px' }}>
-            <TypewriterEffect words={words} /> 
+            <TypewriterEffect words={words} />
           </h1>
           <p className="text-sm font-bold text-gray-400">Atlantic software is a software development company that provides software solutions for your company, integrating AI into your projects.</p>
         </div>
@@ -87,11 +78,9 @@ export function HomeAtlantic() {
           <ButtonWithIcon />
           <ButtonWithCalendarIcon />
         </div>
-        
-        {/* <CardHoverEffectDemo></CardHoverEffectDemo> */}
 
+        <CardHoverEffectDemo />
       </section>
     </div>
-    
   );
 }
