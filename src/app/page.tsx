@@ -1,8 +1,9 @@
-"use client";
+"use client"
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./components/ui/navbar-.menu";
 import { cn } from "../../utils/cn"; 
-import { HomeAtlantic } from "@/components/component/home-atlantic";
+import { Button } from "@/components/ui/button";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 
 export default function NavbarDemo() {
   return (
@@ -12,7 +13,7 @@ export default function NavbarDemo() {
     </div>
   );
 }
- 
+
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
@@ -42,6 +43,40 @@ function Navbar({ className }: { className?: string }) {
           </div>
         </MenuItem>
       </Menu>
+    </div>
+  );
+}
+
+export function HomeAtlantic() {
+  const words = [
+    {
+      text: "Potencia",
+    },
+    {
+      text: "tu",
+    },
+    {
+      text: "negocio",
+    },
+    {
+      text: "con",
+    },
+    {
+      text: "Atlantic software.",
+      className: "text-blue-600 dark:text-blue-500",
+    },
+  ];
+
+  return (
+    <div className="bg-black text-white">
+      <section className="max-w-6xl mx-auto px-4 py-20 text-center">
+        <div className="mb-12">
+          <h1 className="text-6xl font-bold mb-4" style={{ marginTop: '150px' }}>
+            <TypewriterEffect words={words} /> {/* Utiliza el componente TypewriterEffect */}
+          </h1>
+        </div>
+        
+      </section>
     </div>
   );
 }
