@@ -2,14 +2,14 @@
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./components/ui/navbar-.menu";
 import { cn } from "../../utils/cn"; 
-import { Button } from "@/components/ui/button";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { CardHoverEffectDemo } from "@/components/component/card-hover-effect-component";
 import { ButtonWithIcon } from "@/components/component/button-shadcn";
 import { ButtonWithCalendarIcon } from "@/components/component/book-call";
 import { WavyBackgroundDemo } from "@/components/component/wavy-background";
 import { Pricing } from "@/components/component/pricing";
-
+import { StickyScrollRevealDemo } from "@/components/component/sticky-scroll";
+import Services from "@/components/component/services";
 export default function NavbarDemo() {
   return (
     <div className="relative w-full flex items-center justify-center">
@@ -78,8 +78,20 @@ export function HomeAtlantic() {
           <ButtonWithIcon />
           <ButtonWithCalendarIcon />
         </div>
+        
         <CardHoverEffectDemo />
+        
         <Pricing></Pricing>
+
+        <Services></Services>
+
+
+        <section className="py-3">
+        <StickyScrollRevealDemo></StickyScrollRevealDemo>
+        </section>
+
+
+
       </section>
     </div>
   );
