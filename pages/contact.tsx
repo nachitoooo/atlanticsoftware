@@ -5,6 +5,7 @@ import { Label } from "@radix-ui/react-label";
 import Input from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
+import { FiSend } from "react-icons/fi"; // Importar el ícono de enviar desde React Icons
 import "tailwindcss/tailwind.css";
 import "sweetalert2/dist/sweetalert2.css";
 
@@ -109,22 +110,12 @@ export function ContactFormDemo() {
           <button
             type="submit"
             className="mt-8 px-6 py-3 bg-gradient-to-r from-neutral-400 to-neutral-500 text-white rounded-md shadow-md hover:from-neutral-500 hover:to-neutral-600 focus:outline-none focus:ring-2 focus:ring-neutral-400 flex items-center justify-center gap-2 transition-all duration-300 ease-in-out"
+            style={{ marginLeft: '15px' }}
           >
-            Enviar
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
+            <span className="flex items-center">
+              Enviar
+              <FiSend className="ml-2" style={{ marginLeft: '15px' }}/> 
+            </span>
           </button>
         </form>
       </div>
