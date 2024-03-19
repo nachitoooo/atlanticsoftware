@@ -10,8 +10,8 @@ import { WavyBackgroundDemo } from "@/components/component/wavy-background";
 import { Pricing } from "@/components/component/pricing";
 import { StickyScrollRevealDemo } from "@/components/component/sticky-scroll";
 import { AtlanticFooter } from "@/components/component/atlantic-software";
-
 import Services from "@/components/component/services";
+
 export default function Home() {
   return (
     <div className="relative w-full flex items-center justify-center">
@@ -95,6 +95,7 @@ function HomeAtlantic() {
       </section>
       
       <AtlanticFooter></AtlanticFooter>
+
 
     </div>
   );
