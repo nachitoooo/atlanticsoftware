@@ -10,10 +10,11 @@ import { WavyBackgroundDemo } from "@/components/component/wavy-background";
 import { Pricing } from "@/components/component/pricing";
 import { StickyScrollRevealDemo } from "@/components/component/sticky-scroll";
 import Services from "@/components/component/services";
+
 export default function NavbarDemo() {
   return (
     <div className="relative w-full flex items-center justify-center">
-      <WavyBackgroundDemo /> {/* Coloca el fondo ondulado aquí para que aparezca detrás de todo */}
+      <WavyBackgroundDemo /> 
 
       <Navbar className="top-2" />
       <HomeAtlantic />
