@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import Swal from "sweetalert2";
 import { Label } from "@radix-ui/react-label";
 import Input from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import "tailwindcss/tailwind.css";
+import "sweetalert2/dist/sweetalert2.css";
+
 
 const YOUR_SERVICE_ID = "service_nshkq05";
 const YOUR_TEMPLATE_ID = "template_1awvomf";
-const YOUR_USER_ID = "XdPWlXHgq0KzRPA4_"; 
+const YOUR_USER_ID = "XdPWlXHgq0KzRPA4_";
 
 export function ContactFormDemo() {
   const [formData, setFormData] = useState({
@@ -40,8 +43,18 @@ export function ContactFormDemo() {
         YOUR_USER_ID
       );
       console.log("¡Correo electrónico enviado correctamente!");
+      Swal.fire({
+        icon: 'success',
+        title: '¡Email sent!',
+        text: 'The email was sent correctly. We will contact you shortly',
+      });
     } catch (error) {
       console.error("Error al enviar el correo electrónico:", error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'An error occurred while sending the email. Please try again later.',
+      });
     }
   };
 
@@ -56,51 +69,62 @@ export function ContactFormDemo() {
           Resolveremos tus dudas y responderemos cualquier pregunta que tengas.
         </p>
 
-        <form className="mt-8" onSubmit={handleSubmit}>
+        <form className="mt-8" onSubmit={handleSubmit} >
           <LabelInputContainer>
-            <Label htmlFor="name">Nombre</Label>
+            <Label htmlFor="name" className="text-gray-400" >Name</Label>
             <Input
               id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Tyler Durden"
+              placeholder=""
               type="text"
-              className="w-full"
+              className="w-full custom-input" style={{ backgroundColor: "#030712", border: "1px solid #1f2937"}}
             />
           </LabelInputContainer>
           <LabelInputContainer>
-            <Label htmlFor="email">Correo electrónico</Label>
+            <Label htmlFor="email" className="text-gray-400">Email</Label>
             <Input
               id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="projectmayhem@fc.com"
               type="email"
-              className="w-full"
-            />
+              className="w-full custom-input" style={{ backgroundColor: "#030712", border: "1px solid #1f2937"}}            />
           </LabelInputContainer>
           <LabelInputContainer>
-            <Label htmlFor="message">Mensaje</Label>
+            <Label htmlFor="message" className="text-gray-400">Message</Label>
             <Textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Escribe tu mensaje aquí."
-            className="w-full h-40 resize-none text-gray-300"
-            style={{ color: 'white' }}
-          />
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder=""
+              className="w-full h-40 resize-none bg-gray-800 text-white p-2 rounded-md"
+            />
           </LabelInputContainer>
 
           <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent mt-8 h-[1px] w-full text-gray-300" />
 
           <button
             type="submit"
-            className="mt-8 px-6 py-3 bg-gradient-to-r from-neutral-400 to-neutral-500 text-white rounded-md shadow-md hover:from-neutral-500 hover:to-neutral-600 focus:outline-none focus:ring-2 focus:ring-neutral-400"
+            className="mt-8 px-6 py-3 bg-gradient-to-r from-neutral-400 to-neutral-500 text-white rounded-md shadow-md hover:from-neutral-500 hover:to-neutral-600 focus:outline-none focus:ring-2 focus:ring-neutral-400 flex items-center justify-center gap-2 transition-all duration-300 ease-in-out"
           >
-            Enviar mensaje
+            Enviar
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
           </button>
         </form>
       </div>
