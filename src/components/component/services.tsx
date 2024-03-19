@@ -6,7 +6,7 @@ export default function Services() {
         <div className="text-center">
           <h3 className="text-lg font-semibold">Software development for Startups</h3>
           <p className="text-sm text-gray-600">
-            Empower your startup's journey with custom software development tailored to fuel growth and innovation
+            Empower your startup&apos;s journey with custom software development tailored to fuel growth and innovation
           </p>
         </div>
       </div>
@@ -24,7 +24,7 @@ export default function Services() {
         <div className="text-center">
           <h3 className="text-lg font-semibold">Software development for companies</h3>
           <p className="text-sm text-gray-600">
-            Elevate your company's potential through software solutions, finely tuned to ensure business success
+            Elevate your company&apos;s potential through software solutions, finely tuned to ensure business success
           </p>
         </div>
       </div>
@@ -39,7 +39,7 @@ export default function Services() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function BuildingIcon(props) {
