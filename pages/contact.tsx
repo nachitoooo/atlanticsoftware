@@ -67,7 +67,7 @@ export function ContactFormDemo() {
           <span className="text-blue-300 dark:text-blue-500">Software</span>
         </h2>
         <p className="text-neutral-600 text-lg max-w-md mt-4 dark:text-neutral-300">
-          Resolveremos tus dudas y responderemos cualquier pregunta que tengas.
+        We will resolve your doubts and answer any questions you have.
         </p>
 
         <form className="mt-8" onSubmit={handleSubmit} >
