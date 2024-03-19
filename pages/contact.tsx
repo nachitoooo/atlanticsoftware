@@ -84,16 +84,17 @@ export function ContactFormDemo() {
           <LabelInputContainer>
             <Label htmlFor="message">Mensaje</Label>
             <Textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Escribe tu mensaje aquí."
-              className="w-full h-40 resize-none"
-            />
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Escribe tu mensaje aquí."
+            className="w-full h-40 resize-none text-gray-300"
+            style={{ color: 'white' }}
+          />
           </LabelInputContainer>
 
-          <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent mt-8 h-[1px] w-full" />
+          <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent mt-8 h-[1px] w-full text-gray-300" />
 
           <button
             type="submit"
