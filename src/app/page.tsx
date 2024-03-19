@@ -9,9 +9,9 @@ import { ButtonWithCalendarIcon } from "@/components/component/book-call";
 import { WavyBackgroundDemo } from "@/components/component/wavy-background";
 import { Pricing } from "@/components/component/pricing";
 import { StickyScrollRevealDemo } from "@/components/component/sticky-scroll";
-import Services from "@/components/component/services";
+import { AtlanticFooter } from "@/components/component/atlantic-software";
 
-// Define el componente de página principal (Home)
+import Services from "@/components/component/services";
 export default function Home() {
   return (
     <div className="relative w-full flex items-center justify-center">
@@ -22,7 +22,6 @@ export default function Home() {
   );
 }
 
-// Define el componente Navbar
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
@@ -50,6 +49,8 @@ function Navbar({ className }: { className?: string }) {
             <HoveredLink href="/enterprise">Enterprise</HoveredLink>
           </div>
         </MenuItem>
+        <HoveredLink href="/contact">Contact</HoveredLink>
+        
       </Menu>
     </div>
   );
@@ -58,12 +59,12 @@ function Navbar({ className }: { className?: string }) {
 // Define el componente HomeAtlantic
 function HomeAtlantic() {
   const words = [
-    { text: "Potencia" },
-    { text: "tu" },
-    { text: "negocio" },
-    { text: "con" },
+    { text: "Boost" },
+    { text: "your" },
+    { text: "business" },
+    { text: "with" },
     { text: "Atlantic" },
-    { text: "Software.", className: "text-blue-600 dark:text-blue-500" },
+    { text: "Software", className: "text-sky-600 dark:text-blue-500" },
   ];
 
   return (
@@ -80,6 +81,7 @@ function HomeAtlantic() {
           <ButtonWithIcon />
           <ButtonWithCalendarIcon />
         </div>
+       
         
         <CardHoverEffectDemo />
         
@@ -91,6 +93,9 @@ function HomeAtlantic() {
           <StickyScrollRevealDemo></StickyScrollRevealDemo>
         </section>
       </section>
+      
+      <AtlanticFooter></AtlanticFooter>
+
     </div>
   );
 }
