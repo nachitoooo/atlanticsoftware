@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from "react";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "./components/ui/navbar-.menu";
+import { HoveredLink, Menu, MenuItem } from "./components/ui/navbar-.menu";
 import { cn } from "../../utils/cn"; 
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { CardHoverEffectDemo } from "@/components/component/card-hover-effect-component";
@@ -11,24 +11,24 @@ import { Pricing } from "@/components/component/pricing";
 import { StickyScrollRevealDemo } from "@/components/component/sticky-scroll";
 import Services from "@/components/component/services";
 
-export default function NavbarDemo() {
+// Define el componente de página principal (Home)
+export default function Home() {
   return (
     <div className="relative w-full flex items-center justify-center">
       <WavyBackgroundDemo /> 
-
       <Navbar className="top-2" />
       <HomeAtlantic />
     </div>
   );
 }
 
+// Define el componente Navbar
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
       className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
     >
-      
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Home">
         </MenuItem>
@@ -55,7 +55,8 @@ function Navbar({ className }: { className?: string }) {
   );
 }
 
-export function HomeAtlantic() {
+// Define el componente HomeAtlantic
+function HomeAtlantic() {
   const words = [
     { text: "Potencia" },
     { text: "tu" },
@@ -67,7 +68,7 @@ export function HomeAtlantic() {
 
   return (
     <div className="bg-black text-white">
-      <section className="max-w-6xl mx-auto px-4 py-20 text-center relative z-10"> {/* Asegúrate de tener un z-index mayor que el fondo ondulado */}
+      <section className="max-w-6xl mx-auto px-4 py-20 text-center relative z-10">
         <div className="mb-12">
           <h1 className="text-6xl font-bold mb-4" style={{ marginTop: '150px' }}>
             <TypewriterEffect words={words} />
@@ -86,13 +87,9 @@ export function HomeAtlantic() {
 
         <Services></Services>
 
-
         <section className="py-3">
-        <StickyScrollRevealDemo></StickyScrollRevealDemo>
+          <StickyScrollRevealDemo></StickyScrollRevealDemo>
         </section>
-
-
-
       </section>
     </div>
   );
