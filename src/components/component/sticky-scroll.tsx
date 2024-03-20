@@ -2,7 +2,11 @@
 import React from "react";
 import { StickyScroll } from "../ui/sticky-scroll-reveal";
 import Image from "next/image";
- 
+import { AiOutlineTeam } from "react-icons/ai";
+import { HiVideoCamera } from "react-icons/hi";
+import { MdOutlineNotStarted } from "react-icons/md";
+import { FaNetworkWired } from "react-icons/fa";
+
 const content = [
   {
     title: "Our work",
@@ -11,6 +15,7 @@ const content = [
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
         Collaborative Editing
+        <AiOutlineTeam className="ml-2" />
       </div>
     ),
   },
@@ -18,15 +23,10 @@ const content = [
     title: "Our first meeting",
     description:"The first step is to have a meeting to understand your needs and requirements. We will discuss the project and establish a budget.",
           content: (
-      <div className="h-full w-full  flex items-center justify-center text-white">
-        <Image
-          src="/linear.webp"
-          width={300}
-          height={300}
-          className="h-full w-full object-cover"
-          alt="linear board demo"
-        />
-      </div>
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+            Meeting.
+            <HiVideoCamera className="ml-2" />
+          </div>
     ),
   },
   {
@@ -35,7 +35,8 @@ const content = [
       "Once our proposed budget and timeline are mutually agreed upon, the desing and development team at Atlantic Software will promptly initiate work on developing your idea.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        Version control
+        Start of the project
+        <MdOutlineNotStarted className="ml-2" />
       </div>
     ),
   },
@@ -45,7 +46,8 @@ const content = [
       "At Atlantic Software, we believe in transparency and accountability throughout the project lifecycle. With our approach, you'll witness tangible progress on your project every week. Weekly meetings are scheduled to showcase the advancements made, ensuring clear communication and alignment with your vision.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Running out of content
+       Results
+       <FaNetworkWired className="ml-2" />
       </div>
     ),
   },
