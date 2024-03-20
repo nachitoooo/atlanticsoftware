@@ -11,6 +11,7 @@ import { Pricing } from "@/components/component/pricing";
 import { StickyScrollRevealDemo } from "@/components/component/sticky-scroll";
 import { AtlanticFooter } from "@/components/component/atlantic-software";
 import Services from "@/components/component/services";
+import { ReadyUseAi } from "@/components/component/ready_use_ai";
 
 export default function Home() {
   return (
@@ -83,8 +84,9 @@ function HomeAtlantic() {
         </div>
        
         <CardHoverEffectDemo />
-        
         <Pricing></Pricing>
+        
+
 
         <Services></Services>
 
@@ -92,6 +94,8 @@ function HomeAtlantic() {
           <StickyScrollRevealDemo></StickyScrollRevealDemo>
         </section>
       </section>
+      <ReadyUseAi></ReadyUseAi>
+
       
       <AtlanticFooter></AtlanticFooter>
 
