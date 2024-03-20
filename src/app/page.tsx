@@ -13,6 +13,7 @@ import { AtlanticFooter } from "@/components/component/atlantic-software";
 import Services from "@/components/component/services";
 import { ReadyUseAi } from "@/components/component/ready_use_ai";
 
+
 export default function Home() {
   return (
     <div className="relative w-full flex items-center justify-center">
@@ -74,7 +75,7 @@ function HomeAtlantic() {
           <h1 className="text-6xl font-bold mb-4" style={{ marginTop: '150px' }}>
             <TypewriterEffect words={words} />
           </h1>
-          <p className="text-sm font-bold text-gray-400">Atlantic software is a software development company that provides software solutions for your company, integrating AI into your projects.</p>
+          <p className="text-xl font-bold text-gray-400">Atlantic software is a software development company that provides software solutions for your company, integrating AI into your projects.</p>
         </div>
 
         <div className="flex justify-center space-x-4">

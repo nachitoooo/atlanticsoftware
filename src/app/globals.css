@@ -34,3 +34,19 @@ body {
 html{
   overflow-x: hidden;
 }
+
+#custom-button {
+  background-color: #3a0c6e; 
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .5s;
+  color: #D3D3D3;
+}
+
+#custom-button:hover { 
+  background-color: #7b26d9; 
+}
+.grid-pattern{
+  background-image: url(../../public/img/background.webp);
+  background-size: contain;
+}

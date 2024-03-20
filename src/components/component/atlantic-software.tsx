@@ -14,9 +14,9 @@ export function AtlanticFooter() {
               Services
             </Link>
             <Link className="font-medium transition-colors hover:underline" href="#">
-              About
+              Pricing
             </Link>
-            <Link className="font-medium transition-colors hover:underline" href="#">
+            <Link className="font-medium transition-colors hover:underline" href="/contact">
               Contact
             </Link>
           </nav>
