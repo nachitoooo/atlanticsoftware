@@ -57,7 +57,6 @@ function Navbar({ className }: { className?: string }) {
   );
 }
 
-// Define el componente HomeAtlantic
 function HomeAtlantic() {
   const words = [
     { text: "Boost" },
