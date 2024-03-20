@@ -16,13 +16,14 @@ export const HoverEffect = ({
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
+
   return (
     <div
       className={cn(
         "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
         className
       )}
-      style={{ paddingTop: "60vh" }}
+      style={{ paddingTop: "60vh" }} 
     >
       {items.map((item, idx) => (
         <Link
@@ -33,6 +34,7 @@ export const HoverEffect = ({
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
+            
             {hoveredIndex === idx && (
               <motion.span
                 className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-gray-400/[0.8] block rounded-3xl"

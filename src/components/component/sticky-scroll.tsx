@@ -5,9 +5,9 @@ import Image from "next/image";
  
 const content = [
   {
-    title: "How do we work",
+    title: "Our work",
     description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+      "Atlantic Software crafts custom software solutions for startups and companies, integrating AI to fuel growth. Specializing in e-commerce and landing pages, we elevate businesses and convert visitors into customers. Choose us to boost your business.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
         Collaborative Editing
@@ -15,10 +15,9 @@ const content = [
     ),
   },
   {
-    title: "Real time changes",
-    description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
-    content: (
+    title: "Our first meeting",
+    description:"The first step is to have a meeting to understand your needs and requirements. We will discuss the project and establish a budget.",
+          content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <Image
           src="/linear.webp"
@@ -31,9 +30,9 @@ const content = [
     ),
   },
   {
-    title: "Version control",
+    title: "Start the project",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Once our proposed budget and timeline are mutually agreed upon, the desing and development team at Atlantic Software will promptly initiate work on developing your idea.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
         Version control
@@ -41,9 +40,9 @@ const content = [
     ),
   },
   {
-    title: "Running out of content",
+    title: "Results",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "At Atlantic Software, we believe in transparency and accountability throughout the project lifecycle. With our approach, you'll witness tangible progress on your project every week. Weekly meetings are scheduled to showcase the advancements made, ensuring clear communication and alignment with your vision.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
         Running out of content

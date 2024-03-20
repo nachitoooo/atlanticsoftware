@@ -1,11 +1,12 @@
 import React from 'react';
 import { FaQuestion, FaShoppingCart, FaBuilding, FaPlane } from 'react-icons/fa';
+import { MdOutlineDisplaySettings } from "react-icons/md";
 
 export default function Services() {
   return (
     <div className="max-w-4xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
       <ServiceItem
-        icon={<FaQuestion className="text-2xl" />}
+        icon={<MdOutlineDisplaySettings className="text-2xl" />}
         title="Software development for Startups"
         description="Empower your startup's journey with custom software development tailored to fuel growth and innovation"
       />

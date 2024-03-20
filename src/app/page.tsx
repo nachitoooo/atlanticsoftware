@@ -82,7 +82,6 @@ function HomeAtlantic() {
           <ButtonWithCalendarIcon />
         </div>
        
-        
         <CardHoverEffectDemo />
         
         <Pricing></Pricing>
