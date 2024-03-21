@@ -31,7 +31,7 @@ export default function Services() {
 
 function ServiceItem({ icon, title, description }) {
   return (
-    <div className="flex flex-col items-center p-6 border rounded-lg space-y-4">
+    <div className="flex flex-col items-center p-6 border rounded-lg space-y-4 md:max-w-[400px]">
       {icon}
       <div className="text-center">
         <h3 className="text-lg font-semibold">{title}</h3>
@@ -40,5 +40,3 @@ function ServiceItem({ icon, title, description }) {
     </div>
   );
 }
-
-import { Button } from "@/components/ui/button"
