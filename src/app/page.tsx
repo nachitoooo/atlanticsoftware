@@ -12,6 +12,7 @@ import { StickyScrollRevealDemo } from "@/components/component/sticky-scroll";
 import { AtlanticFooter } from "@/components/component/atlantic-software";
 import Services from "@/components/component/services";
 import { ReadyUseAi } from "@/components/component/ready_use_ai";
+import { FaArrowTurnUp } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -19,13 +20,14 @@ export default function Home() {
       <WavyBackgroundDemo /> 
       <Navbar className="top-2" />
       <HomeAtlantic />
+      <ScrollToTopButton />
     </div>
   );
 }
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
-  const [prevScrollPos, setPrevScrollPos] = useState<number>(0); // Inicializamos con 0
+  const [prevScrollPos, setPrevScrollPos] = useState<number>(0);
   const [visible, setVisible] = useState<boolean>(true);
 
   useEffect(() => {
@@ -116,6 +118,23 @@ function HomeAtlantic() {
       <AtlanticFooter></AtlanticFooter>
 
 
+    </div>
+  );
+}
+
+function ScrollToTopButton() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  return (
+    <div className="fixed bottom-4 right-8 cursor-pointer">
+      <div className="bg-black rounded-full p-1">
+        <FaArrowTurnUp size={33} color="#FFFF" onClick={scrollToTop} />
+      </div>
     </div>
   );
 }

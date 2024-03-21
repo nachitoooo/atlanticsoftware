@@ -6,7 +6,7 @@ export function ReadyUseAi(): JSX.Element {
     <section className="bg-black py-16 px-8 w-full">
       <div className="w-full flex justify-end">
         <div className="flex flex-col items-start h-full grid-pattern">
-          <span className="text-xl font-bold uppercase tracking-widest text-purple-400 mb-2">Ready to use AI?</span>
+          <span className="text-4xl font-bold uppercase tracking-widest text-purple-400 mb-2">Ready to use AI?</span>
           <h2 className="text-4xl font-bold text-gray-500 leading-tight mb-6">
             Our clients have increased the customer satisfaction inside their <br></br>software by integrating AI
           </h2>
