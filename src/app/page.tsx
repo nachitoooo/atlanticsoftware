@@ -5,7 +5,7 @@ import { cn } from "../../utils/cn";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { CardHoverEffectDemo } from "@/components/component/card-hover-effect-component";
 import { ButtonWithIcon } from "@/components/component/button-shadcn";
-import { ButtonWithCalendarIcon } from "@/components/component/book-call";
+import { HandShake } from "@/components/component/book-call";
 import { WavyBackgroundDemo } from "@/components/component/wavy-background";
 import { Pricing } from "@/components/component/pricing";
 import { StickyScrollRevealDemo } from "@/components/component/sticky-scroll";
@@ -31,10 +31,10 @@ function Navbar({ className }: { className?: string }) {
       className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
     >
       <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="Home">
+        <MenuItem setActive={setActive} active={active} item="home">
         </MenuItem>
         
-        <MenuItem setActive={setActive} active={active} item="Services">
+        <MenuItem setActive={setActive} active={active} item="services">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/web-dev">Web Development</HoveredLink>
             <HoveredLink href="/interface-design">Interface Design</HoveredLink>
@@ -43,7 +43,7 @@ function Navbar({ className }: { className?: string }) {
           </div>
         </MenuItem>
 
-        <MenuItem setActive={setActive} active={active} item="Pricing">
+        <MenuItem setActive={setActive} active={active} item="pricing">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/hobby">Hobby</HoveredLink>
             <HoveredLink href="/individual">Individual</HoveredLink>
@@ -51,7 +51,7 @@ function Navbar({ className }: { className?: string }) {
             <HoveredLink href="/enterprise">Enterprise</HoveredLink>
           </div>
         </MenuItem>
-        <HoveredLink href="/contact">Contact</HoveredLink>
+        <HoveredLink href="/contact">contact</HoveredLink>
         
       </Menu>
     </div>
@@ -80,7 +80,7 @@ function HomeAtlantic() {
 
         <div className="flex justify-center space-x-4">
           <ButtonWithIcon />
-          <ButtonWithCalendarIcon />
+          <HandShake />
         </div>
        
         <CardHoverEffectDemo />

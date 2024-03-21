@@ -8,16 +8,16 @@ export function AtlanticFooter() {
         <div className="flex items-center gap-4">
           <nav className="flex ml-auto space-x-4">
             <Link className="font-medium transition-colors hover:underline" href="#">
-              Home
+              home
             </Link>
             <Link className="font-medium transition-colors hover:underline" href="#">
-              Services
+              services
             </Link>
             <Link className="font-medium transition-colors hover:underline" href="#">
-              Pricing
+              pricing
             </Link>
             <Link className="font-medium transition-colors hover:underline" href="/contact">
-              Contact
+              contact
             </Link>
           </nav>
         </div>
