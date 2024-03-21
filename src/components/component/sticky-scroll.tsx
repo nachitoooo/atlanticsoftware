@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { StickyScroll } from "../ui/sticky-scroll-reveal";
-import Image from "next/image";
 import { AiOutlineTeam } from "react-icons/ai";
 import { HiVideoCamera } from "react-icons/hi";
 import { MdOutlineNotStarted } from "react-icons/md";

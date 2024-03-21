@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HoveredLink, Menu, MenuItem } from "./components/ui/navbar-.menu";
 import { cn } from "../../utils/cn"; 
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
@@ -13,7 +13,6 @@ import { AtlanticFooter } from "@/components/component/atlantic-software";
 import Services from "@/components/component/services";
 import { ReadyUseAi } from "@/components/component/ready_use_ai";
 
-
 export default function Home() {
   return (
     <div className="relative w-full flex items-center justify-center">
@@ -26,9 +25,26 @@ export default function Home() {
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
+  const [prevScrollPos, setPrevScrollPos] = useState<number>(0); // Inicializamos con 0
+  const [visible, setVisible] = useState<boolean>(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos, visible]);
+
   return (
     <div
-      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+      className={cn("fixed inset-x-0 max-w-2xl mx-auto z-50 transition-all duration-300", className, {
+        "top-0": visible,
+        "-top-full": !visible,
+      })}
     >
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="home">
@@ -75,7 +91,7 @@ function HomeAtlantic() {
           <h1 className="text-6xl font-bold mb-4" style={{ marginTop: '150px' }}>
             <TypewriterEffect words={words} />
           </h1>
-          <p className="text-xl font-bold text-gray-400">Atlantic software is a software development company that provides software solutions for your company, integrating AI into your projects.</p>
+          <p className="text-xl font-bold text-white-40">Atlantic software is a software development company that provides software solutions for your company, integrating AI into your projects.</p>
         </div>
 
         <div className="flex justify-center space-x-4">
