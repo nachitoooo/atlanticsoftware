@@ -37,7 +37,7 @@ export function AtlanticFooter() {
             <AiFillLinkedin className="w-8 h-8 text-white" />
             <span className="sr-only">LinkedIn</span>
           </Link>
-          <Link className="rounded-full w-[42px] h-[42px] border flex items-center justify-center" href="#">
+          <Link className="rounded-full w-[42px] h-[42px] border flex items-center justify-center" href="https://www.instagram.com/atlanticsoftware/" target='_BLANK'>
             <AiFillInstagram className="w-8 h-8 text-white" />
             <span className="sr-only">Instagram</span>
           </Link>
