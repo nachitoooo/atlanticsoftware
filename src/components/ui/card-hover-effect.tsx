@@ -23,7 +23,7 @@ export const HoverEffect = ({
         "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
         className
       )}
-      style={{ paddingTop: "60vh" }} 
+      style={{ paddingTop: "45vh" }} 
     >
       {items.map((item, idx) => (
         <Link
