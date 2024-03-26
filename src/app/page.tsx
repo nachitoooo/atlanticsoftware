@@ -102,10 +102,8 @@ function HomeAtlantic() {
         </div>
        
         <CardHoverEffectDemo />
+
         <Pricing></Pricing>
-        
-
-
         <Services></Services>
 
         <section className="py-3">

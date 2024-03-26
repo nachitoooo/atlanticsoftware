@@ -4,6 +4,7 @@
 const nextConfig = {
     images: {
       domains: ['assets.aceternity.com'],
+      domains: ['cdn.pixabay.com'],
     },
   };
   

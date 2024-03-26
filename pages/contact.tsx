@@ -62,11 +62,11 @@ export function ContactFormDemo() {
   return (
     <div className="flex justify-center items-center h-screen bg-black">
       <div className="bg-white dark:bg-black p-8 md:p-12 shadow-input rounded-2xl">
-        <h2 className="font-bold text-2xl text-neutral-800 dark:text-neutral-200">
+        <h2 className="font-bold text-4xl text-neutral-800 dark:text-neutral-200">
           Contact Atlantic{" "}
           <span className="text-blue-300 dark:text-blue-500">Software</span>
         </h2>
-        <p className="text-neutral-600 text-lg max-w-md mt-4 dark:text-neutral-300">
+        <p className="text-neutral-600 text-sm max-w-md mt-4 dark:text-neutral-300">
         We will resolve your doubts and answer any questions you have.
         </p>
 
