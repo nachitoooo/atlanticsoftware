@@ -1,6 +1,7 @@
 // mercadopago.ts
 
 import axios from 'axios';
+import mercadopago from 'mercadopago';
 
 const ACCESS_TOKEN = 'TEST-6047770759203394-032617-e1238f7731dbce07c21cac9fb954662d-716882574';
 
